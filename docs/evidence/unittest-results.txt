@@ -1,0 +1,31 @@
+test_empty_missing_today_and_cancelled (test_workflow.RuleTests.test_empty_missing_today_and_cancelled) ... ok
+test_timezone_and_future_completion (test_workflow.RuleTests.test_timezone_and_future_completion) ... ok
+test_approval_concurrency_and_exact_replay (test_workflow.WorkflowTests.test_approval_concurrency_and_exact_replay) ... ok
+test_approve_does_not_create_fixes_and_publish_failure_recovers (test_workflow.WorkflowTests.test_approve_does_not_create_fixes_and_publish_failure_recovers) ... ok
+test_archive_blocks_new_work_but_existing_fix_continues (test_workflow.WorkflowTests.test_archive_blocks_new_work_but_existing_fix_continues) ... ok
+test_assigned_reviewer_only (test_workflow.WorkflowTests.test_assigned_reviewer_only) ... ok
+test_batch_partial_failure_retry_stable (test_workflow.WorkflowTests.test_batch_partial_failure_retry_stable) ... ok
+test_budget_does_not_reset_on_resume (test_workflow.WorkflowTests.test_budget_does_not_reset_on_resume) ... ok
+test_cancel_and_approval_race_cannot_reactivate (test_workflow.WorkflowTests.test_cancel_and_approval_race_cannot_reactivate) ... ok
+test_cancel_voids_approval_and_blocks_recovery (test_workflow.WorkflowTests.test_cancel_voids_approval_and_blocks_recovery) ... ok
+test_confirm_required_immutable_and_idempotent (test_workflow.WorkflowTests.test_confirm_required_immutable_and_idempotent) ... ok
+test_confirmation_expiry_and_changed_payload (test_workflow.WorkflowTests.test_confirmation_expiry_and_changed_payload) ... ok
+test_csv_atomic_validation_and_repeat_import (test_workflow.WorkflowTests.test_csv_atomic_validation_and_repeat_import) ... ok
+test_csv_duplicate_ids_owner_and_schema_rejected (test_workflow.WorkflowTests.test_csv_duplicate_ids_owner_and_schema_rejected) ... ok
+test_disabled_session (test_workflow.WorkflowTests.test_disabled_session) ... ok
+test_export_and_csrf_boundary (test_workflow.WorkflowTests.test_export_and_csrf_boundary) ... ok
+test_failure_keeps_snapshot_and_attempt_budget (test_workflow.WorkflowTests.test_failure_keeps_snapshot_and_attempt_budget) ... ok
+test_fixed_metrics_and_frozen_snapshot (test_workflow.WorkflowTests.test_fixed_metrics_and_frozen_snapshot) ... ok
+test_full_acceptance_loop_and_permissions (test_workflow.WorkflowTests.test_full_acceptance_loop_and_permissions) ... ok
+test_historical_missing_and_explicit_gaps (test_workflow.WorkflowTests.test_historical_missing_and_explicit_gaps) ... ok
+test_owner_manager_cannot_self_accept (test_workflow.WorkflowTests.test_owner_manager_cannot_self_accept) ... ok
+test_permission_and_revocation_every_request (test_workflow.WorkflowTests.test_permission_and_revocation_every_request) ... ok
+test_report_revision_old_approval_and_hash (test_workflow.WorkflowTests.test_report_revision_old_approval_and_hash) ... ok
+test_submission_idempotency_and_changed_params (test_workflow.WorkflowTests.test_submission_idempotency_and_changed_params) ... ok
+test_transition_concurrency_single_effect (test_workflow.WorkflowTests.test_transition_concurrency_single_effect) ... ok
+test_worker_crash_restart_and_review_persistence (test_workflow.WorkflowTests.test_worker_crash_restart_and_review_persistence) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 17.748s
+
+OK

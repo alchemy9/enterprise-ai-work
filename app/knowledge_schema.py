@@ -1,0 +1,15 @@
+"""Additive schema for documents, source permissions, and persistent Q&A jobs."""
+SCHEMA = '''
+CREATE TABLE IF NOT EXISTS knowledge_libraries(id TEXT PRIMARY KEY,project_id TEXT NOT NULL REFERENCES projects(id),name TEXT NOT NULL,description TEXT NOT NULL,created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS documents(id TEXT PRIMARY KEY,project_id TEXT NOT NULL REFERENCES projects(id),library_id TEXT NOT NULL REFERENCES knowledge_libraries(id),title TEXT NOT NULL,topic TEXT NOT NULL,active_version INTEGER,state TEXT NOT NULL,acl_mode TEXT NOT NULL,acl TEXT NOT NULL,version INTEGER NOT NULL DEFAULT 1,created_by TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS document_versions(document_id TEXT NOT NULL REFERENCES documents(id),version INTEGER NOT NULL,filename TEXT NOT NULL,content_hash TEXT NOT NULL,raw BLOB NOT NULL,content TEXT NOT NULL DEFAULT '',pages TEXT NOT NULL DEFAULT '[]',status TEXT NOT NULL,index_version TEXT NOT NULL,error_code TEXT,error_message TEXT,effective_from TEXT NOT NULL,effective_to TEXT,created_at TEXT NOT NULL,PRIMARY KEY(document_id,version));
+CREATE TRIGGER IF NOT EXISTS document_source_immutable BEFORE UPDATE ON document_versions WHEN NEW.raw!=OLD.raw OR NEW.content_hash!=OLD.content_hash OR NEW.filename!=OLD.filename BEGIN SELECT RAISE(ABORT,'immutable document source'); END;
+CREATE TABLE IF NOT EXISTS knowledge_chunks(id TEXT PRIMARY KEY,document_id TEXT NOT NULL,document_version INTEGER NOT NULL,ordinal INTEGER NOT NULL,parent_id TEXT,anchor TEXT NOT NULL,heading TEXT NOT NULL,content TEXT NOT NULL,UNIQUE(document_id,document_version,ordinal),FOREIGN KEY(document_id,document_version) REFERENCES document_versions(document_id,version));
+CREATE TABLE IF NOT EXISTS knowledge_attempts(id TEXT PRIMARY KEY,document_id TEXT NOT NULL,document_version INTEGER NOT NULL,stage TEXT NOT NULL,attempt INTEGER NOT NULL,status TEXT NOT NULL,started_at TEXT NOT NULL,ended_at TEXT,summary TEXT NOT NULL,UNIQUE(document_id,document_version,stage,attempt));
+CREATE TABLE IF NOT EXISTS questions(id TEXT PRIMARY KEY,project_id TEXT NOT NULL,actor_id TEXT NOT NULL,submission_key TEXT NOT NULL,request_hash TEXT NOT NULL,question TEXT NOT NULL,state TEXT NOT NULL,answer_status TEXT,version INTEGER NOT NULL DEFAULT 1,data TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL,UNIQUE(project_id,actor_id,submission_key));
+CREATE TABLE IF NOT EXISTS question_feedback(id TEXT PRIMARY KEY,question_id TEXT NOT NULL,actor_id TEXT NOT NULL,kind TEXT NOT NULL,comment TEXT NOT NULL,event_key TEXT NOT NULL,created_at TEXT NOT NULL,UNIQUE(question_id,actor_id,event_key));
+CREATE TABLE IF NOT EXISTS output_sources(output_type TEXT NOT NULL,output_id TEXT NOT NULL,document_id TEXT NOT NULL,document_version INTEGER NOT NULL,PRIMARY KEY(output_type,output_id,document_id,document_version));
+CREATE INDEX IF NOT EXISTS knowledge_version_queue ON document_versions(status);
+CREATE INDEX IF NOT EXISTS questions_queue ON questions(state,created_at);
+CREATE INDEX IF NOT EXISTS output_sources_document ON output_sources(document_id);
+'''

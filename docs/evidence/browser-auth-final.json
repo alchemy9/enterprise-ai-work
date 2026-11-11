@@ -1,0 +1,16 @@
+{
+  "denied": {
+    "sidebarHidden": true,
+    "draftHidden": true,
+    "message": "没有此内容的访问权限"
+  },
+  "finalMetrics": {
+    "ring": "40%",
+    "metrics": [
+      "10",
+      "4",
+      "2",
+      "4"
+    ]
+  }
+}

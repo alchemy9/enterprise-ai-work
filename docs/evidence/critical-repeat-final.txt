@@ -1,0 +1,20 @@
+test_report_revision_old_approval_and_hash (test_workflow.WorkflowTests.test_report_revision_old_approval_and_hash) ... ok
+test_approve_does_not_create_fixes_and_publish_failure_recovers (test_workflow.WorkflowTests.test_approve_does_not_create_fixes_and_publish_failure_recovers) ... ok
+test_cancel_voids_approval_and_blocks_recovery (test_workflow.WorkflowTests.test_cancel_voids_approval_and_blocks_recovery) ... ok
+test_upgrade_reconciles_old_review_trace_without_changing_business (test_workflow.WorkflowTests.test_upgrade_reconciles_old_review_trace_without_changing_business) ... ok
+test_cancel_and_approval_race_cannot_reactivate (test_workflow.WorkflowTests.test_cancel_and_approval_race_cannot_reactivate) ... ok
+test_report_revision_old_approval_and_hash (test_workflow.WorkflowTests.test_report_revision_old_approval_and_hash) ... ok
+test_approve_does_not_create_fixes_and_publish_failure_recovers (test_workflow.WorkflowTests.test_approve_does_not_create_fixes_and_publish_failure_recovers) ... ok
+test_cancel_voids_approval_and_blocks_recovery (test_workflow.WorkflowTests.test_cancel_voids_approval_and_blocks_recovery) ... ok
+test_upgrade_reconciles_old_review_trace_without_changing_business (test_workflow.WorkflowTests.test_upgrade_reconciles_old_review_trace_without_changing_business) ... ok
+test_cancel_and_approval_race_cannot_reactivate (test_workflow.WorkflowTests.test_cancel_and_approval_race_cannot_reactivate) ... ok
+test_report_revision_old_approval_and_hash (test_workflow.WorkflowTests.test_report_revision_old_approval_and_hash) ... ok
+test_approve_does_not_create_fixes_and_publish_failure_recovers (test_workflow.WorkflowTests.test_approve_does_not_create_fixes_and_publish_failure_recovers) ... ok
+test_cancel_voids_approval_and_blocks_recovery (test_workflow.WorkflowTests.test_cancel_voids_approval_and_blocks_recovery) ... ok
+test_upgrade_reconciles_old_review_trace_without_changing_business (test_workflow.WorkflowTests.test_upgrade_reconciles_old_review_trace_without_changing_business) ... ok
+test_cancel_and_approval_race_cannot_reactivate (test_workflow.WorkflowTests.test_cancel_and_approval_race_cannot_reactivate) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 10.755s
+
+OK

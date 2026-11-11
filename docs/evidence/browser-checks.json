@@ -1,0 +1,12 @@
+{
+  "reportURL": "http://127.0.0.1:8765/#/reports/report_9939bf73caa9b3d9",
+  "conflict": {
+    "dialogOpen": true,
+    "input": "冲突时应保留这段尚未保存的人工输入。",
+    "error": "页面版本已过期，请刷新后重试\n排障编号：http_0b4537862bac4a40"
+  },
+  "historicalDisabled": true,
+  "currentEnabled": true,
+  "acceptedTask": "fix_b00c10feaf13d306",
+  "publishedReport": "report_3b4a7d7f744ce8e3"
+}

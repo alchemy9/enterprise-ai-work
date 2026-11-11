@@ -1,0 +1,78 @@
+{
+  "runs": [
+    {
+      "id": "run_eba37fe0795cf1ad",
+      "state": "COMPLETED",
+      "phase": "PUBLISHED",
+      "version": 13,
+      "snapshot_id": "snap_48ab5559eea8f5d0"
+    },
+    {
+      "id": "run_5fc3641c61b8d76d",
+      "state": "WAITING_REVIEW",
+      "phase": "HUMAN_REVIEW",
+      "version": 11,
+      "snapshot_id": "snap_661da50e13ff5eb8"
+    }
+  ],
+  "reports": [
+    {
+      "id": "report_3b4a7d7f744ce8e3",
+      "current_version": 2,
+      "status": "PUBLISHED",
+      "approval_id": "apr_1b09956b28a4a953"
+    },
+    {
+      "id": "report_9939bf73caa9b3d9",
+      "current_version": 2,
+      "status": "IN_REVIEW",
+      "approval_id": "apr_2f5629c7fb22738a"
+    }
+  ],
+  "rectifications": [
+    {
+      "id": "fix_b00c10feaf13d306",
+      "state": "ACCEPTED",
+      "version": 6,
+      "report_id": "report_3b4a7d7f744ce8e3",
+      "report_version": 2
+    }
+  ],
+  "review_attempts": [
+    {
+      "run_id": "run_eba37fe0795cf1ad",
+      "attempt": 1,
+      "status": "CANCELLED",
+      "ended_at": "2026-11-10T20:21:51+08:00",
+      "summary": "审核已撤回或取消（正文 v1）"
+    },
+    {
+      "run_id": "run_5fc3641c61b8d76d",
+      "attempt": 1,
+      "status": "CANCELLED",
+      "ended_at": "2026-11-10T20:31:35+08:00",
+      "summary": "审核已撤回或取消（正文 v1）"
+    },
+    {
+      "run_id": "run_eba37fe0795cf1ad",
+      "attempt": 2,
+      "status": "SUCCEEDED",
+      "ended_at": "2026-11-10T20:22:27+08:00",
+      "summary": "人工审核已通过（正文 v2）"
+    },
+    {
+      "run_id": "run_5fc3641c61b8d76d",
+      "attempt": 2,
+      "status": "WAITING",
+      "ended_at": null,
+      "summary": "等待人工审核（正文 v2）"
+    }
+  ],
+  "schema_version": 2,
+  "health": {
+    "mode": "DEMO_RULES",
+    "schema_version": 2,
+    "status": "ok",
+    "storage": "sqlite"
+  }
+}

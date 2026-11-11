@@ -1,0 +1,28 @@
+{
+  "runs": [
+    {
+      "id": "run_eba37fe0795cf1ad",
+      "state": "COMPLETED",
+      "phase": "PUBLISHED",
+      "version": 13,
+      "snapshot_id": "snap_48ab5559eea8f5d0"
+    }
+  ],
+  "reports": [
+    {
+      "id": "report_3b4a7d7f744ce8e3",
+      "current_version": 2,
+      "status": "PUBLISHED",
+      "approval_id": "apr_1b09956b28a4a953"
+    }
+  ],
+  "rectifications": [
+    {
+      "id": "fix_b00c10feaf13d306",
+      "state": "ACCEPTED",
+      "version": 6,
+      "report_id": "report_3b4a7d7f744ce8e3",
+      "report_version": 2
+    }
+  ]
+}

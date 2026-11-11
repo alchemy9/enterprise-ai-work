@@ -1,0 +1,1711 @@
+{
+  "objective": "完成两份 PRD 的全部需求功能，以模拟企业数据进行可操作复刻演示；不以已有 MVP 重新定义完成。",
+  "updated_at": "2026-11-11",
+  "requirements": [
+    {
+      "id": "ORG-01",
+      "source": "Platform_PRD.md",
+      "line": 157,
+      "title": "企业与成员（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/platform.py",
+        "app/collaboration_features.py",
+        "static/platform.js"
+      ],
+      "progress_note": "账号创建、角色、启停、会话撤销和最后有效管理员保护；历史操作者保留。"
+    },
+    {
+      "id": "ORG-02",
+      "source": "Platform_PRD.md",
+      "line": 163,
+      "title": "项目空间（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/platform.py",
+        "app/collaboration_features.py",
+        "static/platform.js"
+      ],
+      "progress_note": "项目创建、企业内唯一编号、说明/计划日期、成员、归档清单与确认、继续处理整改及重新开放；演示时区固定上海。"
+    },
+    {
+      "id": "ORG-03",
+      "source": "Platform_PRD.md",
+      "line": 169,
+      "title": "项目成员与审核配置（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/platform.py",
+        "app/collaboration_features.py",
+        "static/platform.js"
+      ],
+      "progress_note": "指定审核人、版本化转交、成员退出显式移交；失效审核和整改进入待转交/待分配待办。"
+    },
+    {
+      "id": "SEC-01",
+      "source": "Platform_PRD.md",
+      "line": 173,
+      "title": "权限判定（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/platform.py",
+        "app/collaboration_features.py",
+        "static/platform.js"
+      ],
+      "progress_note": "服务端逐次检查有效账号、租户、系统/业务角色、项目、库/资料授权与对象状态；管理角色不默认获取业务正文。"
+    },
+    {
+      "id": "SEC-02",
+      "source": "Platform_PRD.md",
+      "line": 189,
+      "title": "撤权与结果隔离（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/platform.py",
+        "app/collaboration_features.py",
+        "static/platform.js",
+        "app/source_policies.py",
+        "app/source_policy_schema.py",
+        "static/source_policies.js"
+      ],
+      "progress_note": "检索、引用、历史问答/报告/运行、关联整改和短期下载均继承当前来源权限；收藏不扩大权限。"
+    },
+    {
+      "id": "DATA-01",
+      "source": "Platform_PRD.md",
+      "line": 197,
+      "title": "结构化任务台账（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "页面台账编辑、CSV 行级预检/错误下载、原子提交与去重；当前、历史导入、明确标记的模拟期末快照。"
+    },
+    {
+      "id": "DATA-02",
+      "source": "Platform_PRD.md",
+      "line": 205,
+      "title": "企业连接与同步（P1）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/advanced.py",
+        "static/advanced.js"
+      ],
+      "progress_note": "本地只读模拟连接、字段映射/检查、增量水位、不可变有效快照、故障保留、凭据撤销/到期和恢复；未连接真实企业服务。"
+    },
+    {
+      "id": "KB-01",
+      "source": "Platform_PRD.md",
+      "line": 211,
+      "title": "知识库与文件管理（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "知识库负责人/默认有效期/角色与成员授权、四种格式批量上传、元数据、哈希去重、版本与状态。"
+    },
+    {
+      "id": "KB-02",
+      "source": "Platform_PRD.md",
+      "line": 217,
+      "title": "解析、分块与索引（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "PDF 页码、DOCX 标题与表格表头/行号、合并表格低质量提示、父子分块、版本化索引、失败重试。扫描件明确提示需 OCR。"
+    },
+    {
+      "id": "KB-03",
+      "source": "Platform_PRD.md",
+      "line": 225,
+      "title": "更新、失效与删除（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "新版本可用后切换、下架立即阻断、默认 30 天保留与未来自动清理内容/索引，保留审计元数据；本地备份未自动擦除。"
+    },
+    {
+      "id": "KB-04",
+      "source": "Platform_PRD.md",
+      "line": 231,
+      "title": "检索配置与质量反馈（P0）",
+      "status": "演示功能已实现；真实语义能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js",
+        "app/source_policies.py",
+        "app/source_policy_schema.py",
+        "static/source_policies.js"
+      ],
+      "progress_note": "关键词候选/阈值/标题加权配置、不可变检索版本及报告/问答/开放分析/编排/样本运行绑定、上下文裁剪、反馈处理与样本比较已接通；真实向量/重排未启用。"
+    },
+    {
+      "id": "QA-01",
+      "source": "Platform_PRD.md",
+      "line": 239,
+      "title": "提问与回答（P0）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "问答四区、原文事实与引用、依据不足、授权范围、历史、同项目显式追问和停止；当前为检索摘录。"
+    },
+    {
+      "id": "QA-02",
+      "source": "Platform_PRD.md",
+      "line": 245,
+      "title": "来源追溯（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "受控来源预览、原版本/页段/更新时间、父段上下文及当前权限重验；保守冲突提示并列依据。"
+    },
+    {
+      "id": "QA-03",
+      "source": "Platform_PRD.md",
+      "line": 249,
+      "title": "问答反馈与降级（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "五类反馈、授权样本维护、处理状态/说明；依据不足、冲突与技术故障分别展示。"
+    },
+    {
+      "id": "RPT-01",
+      "source": "Platform_PRD.md",
+      "line": 257,
+      "title": "任务参数与数据预检（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "模板/周期/审核人、知识库、重点关注、来源/历史快照与上期比较，启动前数据缺口确认；冻结版本和截点。"
+    },
+    {
+      "id": "RPT-02",
+      "source": "Platform_PRD.md",
+      "line": 265,
+      "title": "统计规则（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "完成率、本期完成、当前未完成逾期、完成时逾期、自然日、里程碑和同口径上期变化均由规则计算；不倒推历史。"
+    },
+    {
+      "id": "RPT-03",
+      "source": "Platform_PRD.md",
+      "line": 281,
+      "title": "报告生成与结构（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "八章正文、规则等级/关键里程碑/依赖影响、原因线索/缺口、待确认行动、冻结证据和配置版本。"
+    },
+    {
+      "id": "RPT-04",
+      "source": "Platform_PRD.md",
+      "line": 289,
+      "title": "结果校验与重新生成（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "快照/数字/引用校验、独立重新生成及父子关系、原稿/修订对比；已审核正文不被后台改写。"
+    },
+    {
+      "id": "AG-01",
+      "source": "Platform_PRD.md",
+      "line": 297,
+      "title": "受约束 Agent（P0 基础分析；P1 开放规划）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/advanced.py",
+        "static/advanced.js"
+      ],
+      "progress_note": "固定分析节点和开放分析入口均有真实持久状态，采用规则计划/事实与原文摘录替代模型分析。"
+    },
+    {
+      "id": "WF-01",
+      "source": "Platform_PRD.md",
+      "line": 305,
+      "title": "内置工作流（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js"
+      ],
+      "progress_note": "固定汇总和引用问答流程；报告审核/发布、整改创建/流转及开放分析分别保留确定性业务边界。"
+    },
+    {
+      "id": "RUN-01",
+      "source": "Platform_PRD.md",
+      "line": 311,
+      "title": "运行状态与过程展示（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js"
+      ],
+      "progress_note": "服务端排队、持久检查点、节点尝试、预算、错误、等待/完成/退回/取消与成果入口；无虚假进度百分比。"
+    },
+    {
+      "id": "RUN-02",
+      "source": "Platform_PRD.md",
+      "line": 326,
+      "title": "失败重试与人工接管（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "故障恢复、累计预算保留、演示中断入口及人工接管稿；失败原记录保留，人工稿仍需审核。"
+    },
+    {
+      "id": "RUN-03",
+      "source": "Platform_PRD.md",
+      "line": 332,
+      "title": "取消与恢复边界（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js"
+      ],
+      "progress_note": "取消阻止后续动作并作废等待审批，已创建对象保留；完成发布不可取消，恢复不重算已成功节点。"
+    },
+    {
+      "id": "RUN-04",
+      "source": "Platform_PRD.md",
+      "line": 336,
+      "title": "工具调用策略（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js"
+      ],
+      "progress_note": "内置工具登记、分析白名单、逐次当前启停/授权、有限调用、业务写另行确认与唯一 action_id。"
+    },
+    {
+      "id": "APR-01",
+      "source": "Platform_PRD.md",
+      "line": 349,
+      "title": "报告编辑与提交审核（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "撤回后修订、新正文版本/hash、原稿保留、人工事实标签；人工数值声明保留规则原值并逐项记录原因。"
+    },
+    {
+      "id": "APR-02",
+      "source": "Platform_PRD.md",
+      "line": 355,
+      "title": "审核决策与并发（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "明确通过/退回、指定审核人、版本/hash/授权重验、稳定决策回执、并发冲突、催办及失效转交。"
+    },
+    {
+      "id": "APR-03",
+      "source": "Platform_PRD.md",
+      "line": 361,
+      "title": "发布与变更（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "通过与发布为独立事件；发布恢复、正式版只读、派生新草稿重新审核，新版替代关系及旧版留存。"
+    },
+    {
+      "id": "FIX-01",
+      "source": "Platform_PRD.md",
+      "line": 367,
+      "title": "从风险创建整改（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/delivery.py",
+        "app/exports.py",
+        "static/delivery.js"
+      ],
+      "progress_note": "从正式风险核对完整清单后独立确认，逐项返回/重放；显式拆分需新 action_id 和说明。"
+    },
+    {
+      "id": "FIX-02",
+      "source": "Platform_PRD.md",
+      "line": 373,
+      "title": "处理、反馈与状态（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/delivery.py",
+        "app/exports.py",
+        "static/delivery.js"
+      ],
+      "progress_note": "负责人开始/提交、经理改派/延期/取消、退回重提、处理证据、状态日志、失效待分配；验收等待与负责人逾期分开。"
+    },
+    {
+      "id": "FIX-03",
+      "source": "Platform_PRD.md",
+      "line": 386,
+      "title": "验收与追溯（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/delivery.py",
+        "app/exports.py",
+        "static/delivery.js"
+      ],
+      "progress_note": "另一位项目经理验收、退回原因、证据/来源追溯、已验收关联跟进和沟通摘要，沟通不改变完成状态。"
+    },
+    {
+      "id": "OUT-01",
+      "source": "Platform_PRD.md",
+      "line": 394,
+      "title": "成果与历史（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/platform.py",
+        "app/collaboration_features.py",
+        "static/platform.js"
+      ],
+      "progress_note": "按授权项目、类型、状态、作者、时间与名称筛选、20 条分页、收藏、版本/来源与成果历史。"
+    },
+    {
+      "id": "OUT-02",
+      "source": "Platform_PRD.md",
+      "line": 398,
+      "title": "导出（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/delivery.py",
+        "app/exports.py",
+        "static/delivery.js"
+      ],
+      "progress_note": "Markdown/DOCX/PDF 后台导出任务、失败重试、冻结正文版本/审核状态、当前鉴权、账号绑定十分钟下载与审计；中文 PDF 嵌入字体。"
+    },
+    {
+      "id": "MSG-01",
+      "source": "Platform_PRD.md",
+      "line": 404,
+      "title": "待办与通知（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/collaboration_features.py",
+        "app/platform.py",
+        "static/reporting.js"
+      ],
+      "progress_note": "业务事件去重的站内通知/待办、独立投递与失败重投、24 小时/可配置催办、7 天升级、订阅及失效转交/改派。"
+    },
+    {
+      "id": "OPS-01",
+      "source": "Platform_PRD.md",
+      "line": 412,
+      "title": "模板与 Agent 版本（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "Workflow/Agent/模型/工具配置草稿、预览、发布、复制、回滚、停用、版本绑定和变更记录；真实模型质量门槛后置。"
+    },
+    {
+      "id": "OPS-02",
+      "source": "Platform_PRD.md",
+      "line": 418,
+      "title": "运行质量与成本（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "汇总、个人问答、开放分析和编排四类运行；按类型/项目/模板/日期筛选、实际活跃/等待/总经过时间、工具、预算、零模型用量和配额。"
+    },
+    {
+      "id": "OPS-03",
+      "source": "Platform_PRD.md",
+      "line": 424,
+      "title": "审计与追踪（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/platform.py",
+        "app/collaboration_features.py",
+        "static/platform.js"
+      ],
+      "progress_note": "独立审计权限及项目/对象/人员/日期筛选和导出；配置/访问/审批/业务/下载等事件，拒绝请求记录排障号与错误码、不记录正文。"
+    },
+    {
+      "id": "WF-D01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 85,
+      "title": "模板定义与配置（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "固定模板拓扑与允许字段、项目范围、配置版本、复制新 ID、不同运行独立快照；复制不授业务权限。"
+    },
+    {
+      "id": "WF-D02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 95,
+      "title": "变量与数据映射（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "八类变量、必填/默认/枚举/长度/数值范围、来源白名单/允许节点/空值策略；发布与运行时重验，系统变量不可覆盖。"
+    },
+    {
+      "id": "WF-D03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 103,
+      "title": "条件、分支与默认路径（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "默认继续、无证据带缺口降级、故障停止、Schema/权限/人工决策路径；空台账阻断，不能绕过人工审核。"
+    },
+    {
+      "id": "WF-D04",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 111,
+      "title": "配置版本与发布（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "不可变发布版、草稿修订、授权项目沙箱预览、说明/依赖快照、默认入口回滚和工具撤销即时生效。"
+    },
+    {
+      "id": "WF-D05",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 119,
+      "title": "触发与定时（P0 手动；P1 定时）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/advanced.py",
+        "static/advanced.js"
+      ],
+      "progress_note": "手动键去重；每日/每周计划、上海时区、独立项目执行身份、版本策略、截止日、跳过未结束任务、离线只补最近一次，只生成草稿。"
+    },
+    {
+      "id": "WF-N01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 148,
+      "title": "节点契约与状态（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/flows.py",
+        "static/flows.js"
+      ],
+      "progress_note": "持久节点状态与尝试、输入快照和输出命名空间、只读/写工具契约、有限重试与预算、等待释放执行资源、下游前置校验。"
+    },
+    {
+      "id": "WF-N02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 156,
+      "title": "并行、循环和子流程边界（P2）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/flows.py",
+        "static/flows.js"
+      ],
+      "progress_note": "SVG 画布/拖动/节点编辑/连线、最多三路并行、ALL_SUCCESS/ALLOW_PARTIAL 汇合、独立字段命名空间、两层版本化子流程与子节点尝试；禁止环和扩大授权。"
+    },
+    {
+      "id": "AG-D01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 198,
+      "title": "Agent 定义（P0）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "职责、提示、模型引用、知识策略、工具名单、预算与版本；当前本地规则执行。"
+    },
+    {
+      "id": "AG-D02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 206,
+      "title": "提示词、模型与输出约束（P0）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "平台约束不受提示覆盖，配置与运行绑定版本，结构/类型/引用校验、预算与当前授权；真实模型输出为规则替代。"
+    },
+    {
+      "id": "AG-D03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 216,
+      "title": "上下文与记忆（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "项目隔离、冻结任务与资料版本、有限上下文/截取提示、同项目追问重新鉴权，无跨项目长期记忆。"
+    },
+    {
+      "id": "AG-D04",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 224,
+      "title": "Agent 版本与调试（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "草稿、沙箱预览、版本比较、不可变发布/停用、专用样本比较；只读调试不创建报告或整改；严格模型评测后置。"
+    },
+    {
+      "id": "AG-R01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 232,
+      "title": "任务理解与澄清（P1）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/advanced.py",
+        "static/advanced.js"
+      ],
+      "progress_note": "目标/时间/关注事项、缺参澄清最多两轮、范围变化产生新计划；为规则理解演示。"
+    },
+    {
+      "id": "AG-R02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 238,
+      "title": "计划确认与计划变更（P1）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/advanced.py",
+        "static/advanced.js"
+      ],
+      "progress_note": "计划显示范围/工具/预算/输出，确认绑定版本/hash，改计划须再次确认，未确认不读取资料。"
+    },
+    {
+      "id": "AG-R03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 246,
+      "title": "工具选择与有限迭代（P0 固定节点；P1 动态调用）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/advanced.py",
+        "static/advanced.js"
+      ],
+      "progress_note": "有限白名单只读工具步骤、轮数/调用/时间预算、当前授权/停用重验、部分结果与取消；不冒充通用开放模型 Agent。"
+    },
+    {
+      "id": "AG-R04",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 254,
+      "title": "结果、假设与行动提案（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/advanced.py",
+        "static/advanced.js"
+      ],
+      "progress_note": "规则事实、资料线索、可能原因、替代解释、缺口和验证建议分区，风险/证据 ID 可追溯；不自动业务写。"
+    },
+    {
+      "id": "RAG-S01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 264,
+      "title": "读取与检索范围（P0）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "所有检索与父段补充继承当前租户/项目/库/资料权限和有效版本；问题改写采用同项目文本上下文演示。"
+    },
+    {
+      "id": "RAG-S02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 270,
+      "title": "父子块与证据封装（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js",
+        "app/source_policies.py",
+        "app/source_policy_schema.py",
+        "static/source_policies.js"
+      ],
+      "progress_note": "父子块与安全段落/表格行权限、元数据封装、受控预览、父段裁剪；历史输出继承使用过的段落范围，旧输出保守继承全文件；新资料版本先继承上版最严成员交集，需明确调整。"
+    },
+    {
+      "id": "RAG-S03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 276,
+      "title": "引用与证据校验（P0）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "服务端生成引用封装与原文，报告冻结证据/版本并校验引用，历史输出继承当前源访问；语义支持判断为摘录替代。"
+    },
+    {
+      "id": "RAG-S04",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 282,
+      "title": "证据不足与冲突处理（P0）",
+      "status": "演示功能已实现；真实模型/外部能力为模拟替代",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/knowledge.py",
+        "app/document_parser.py",
+        "app/library_schema.py",
+        "app/delivery.py",
+        "static/knowledge.js",
+        "static/delivery.js"
+      ],
+      "progress_note": "依据不足、保守冲突与故障分开，不能自动用通用知识填企业事实；复杂语义冲突未假装已验证。"
+    },
+    {
+      "id": "TOOL-S01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 290,
+      "title": "工具登记（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "五类内置读/算/写工具、Schema/超时/重试/确认字段、启停与版本；模拟连接不包含真实凭据。"
+    },
+    {
+      "id": "TOOL-S02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 296,
+      "title": "每次调用的策略检查（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "每次执行当前身份/项目/资料/工具状态、分析白名单和累计预算重验；写前再次验证批准或确认。"
+    },
+    {
+      "id": "TOOL-S03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 302,
+      "title": "业务动作确认（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/delivery.py",
+        "app/exports.py",
+        "static/delivery.js"
+      ],
+      "progress_note": "发布批准与整改确认分离，完整字段/风险/来源版本/参数 hash 与有效期绑定，变参须重新确认。"
+    },
+    {
+      "id": "TOOL-S04",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 308,
+      "title": "幂等、结果不明与补偿（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/delivery.py",
+        "app/exports.py",
+        "static/delivery.js"
+      ],
+      "progress_note": "业务写唯一 action_id、同参回执、异参冲突、批量逐项结果、已成功重放；本地事务避免结果不明时盲写。"
+    },
+    {
+      "id": "HITL-01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 316,
+      "title": "暂停与持久化（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/flows.py",
+        "static/flows.js"
+      ],
+      "progress_note": "审批/确认对象与绑定版本持久保存，人工等待不占 Worker；重启与页面关闭不丢决定入口。"
+    },
+    {
+      "id": "HITL-02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 322,
+      "title": "决策与恢复（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/flows.py",
+        "static/flows.js"
+      ],
+      "progress_note": "按版本/hash/状态/当前权限决定，转交保留前后值、原因与事件，旧页面不能覆盖新决策。"
+    },
+    {
+      "id": "HITL-03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 328,
+      "title": "人工接管与撤回（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/reporting.py",
+        "static/reporting.js",
+        "app/exports.py"
+      ],
+      "progress_note": "人工接管失败分析、撤回作废旧审批、修订生成新版本；接管不等于发布，原始失败记录保留。"
+    },
+    {
+      "id": "RUN-S01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 354,
+      "title": "重试、恢复与错误分类（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/flows.py",
+        "static/flows.js"
+      ],
+      "progress_note": "业务/权限/版本/来源/预算/工具错误分类，读节点有限恢复，写入回执；累计使用量保留。"
+    },
+    {
+      "id": "RUN-S02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 362,
+      "title": "取消与并发控制（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/flows.py",
+        "static/flows.js"
+      ],
+      "progress_note": "取消和重复请求受状态/版本与唯一键保护，晚到只读结果不写入已取消运行，已提交业务对象保留。"
+    },
+    {
+      "id": "RUN-S03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 368,
+      "title": "队列、预算与资源隔离（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "企业活跃队列覆盖汇总/问答/开放分析/编排、累计调用和活跃时间、上下文上限；模型零调用，生产资源隔离/压力门槛后置。"
+    },
+    {
+      "id": "OBS-S01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 410,
+      "title": "运行可观测（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/governance.py",
+        "app/variables.py",
+        "static/governance.js"
+      ],
+      "progress_note": "实际节点/工具元数据、运行类型与状态、活跃/等待/总经过、版本/快照/证据/审核/结果关联；历史缺采集不补造。"
+    },
+    {
+      "id": "OBS-S02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 416,
+      "title": "回归评测与发布门槛（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/evaluations.py",
+        "static/evaluations.js"
+      ],
+      "progress_note": "不可变版本化 Gold 样本集、候选/基准配置快照比较、逐项实际数字/摘录判分、只读动作声明、人工评审；严格安全/生产回归按用户要求后置。"
+    },
+    {
+      "id": "OBS-S03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 422,
+      "title": "安全与审计（P0）",
+      "status": "演示功能已实现；严格验收后置",
+      "evidence": [
+        "app/service.py",
+        "app/domain.py",
+        "static/app.js",
+        "app/server.py",
+        "app/platform.py"
+      ],
+      "progress_note": "非执行型文本渲染、无任意网络/代码工具、服务端权限、元数据脱敏、配置/调试/发布/取消/业务/拒绝审计；无外部密钥。"
+    }
+  ],
+  "acceptance_cases": [
+    {
+      "id": "TC-01",
+      "source": "Platform_PRD.md",
+      "line": 543,
+      "description": "ORG-01、SEC-01 | 停用成员后复用旧会话 | 受保护操作拒绝；历史操作保留 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-02",
+      "source": "Platform_PRD.md",
+      "line": 544,
+      "description": "SEC-01 | A 租户请求 B 对象 ID | 正文、标题、统计和片段均不泄露 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-03",
+      "source": "Platform_PRD.md",
+      "line": 545,
+      "description": "SEC-02 | 成员撤权后打开缓存问答/报告/下载 | 60 秒内阻断，含源内容输出受限 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-04",
+      "source": "Platform_PRD.md",
+      "line": 546,
+      "description": "DATA-01 | CSV 含错误日期与重复 ID | 行级报错，整批不提交，可下载错误清单 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-05",
+      "source": "Platform_PRD.md",
+      "line": 547,
+      "description": "DATA-01 | 同一有效批次重试导入 | 不重复新增，能看到批次与更新记录 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-06",
+      "source": "Platform_PRD.md",
+      "line": 548,
+      "description": "DATA-01、RPT-01 | 选择无期末快照的历史周期 | 明示缺口，不把当前状态当历史 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-07",
+      "source": "Platform_PRD.md",
+      "line": 549,
+      "description": "KB-01～02 | 上传可解析文档后提问 | 先处理中，索引可用后可命中定位 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-08",
+      "source": "Platform_PRD.md",
+      "line": 550,
+      "description": "KB-02 | 上传扫描/加密 PDF | 明确失败/不支持，不显示可检索成功 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-09",
+      "source": "Platform_PRD.md",
+      "line": 551,
+      "description": "KB-03 | 新版本索引失败 | 旧版继续可用；新版本不混入 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-10",
+      "source": "Platform_PRD.md",
+      "line": 552,
+      "description": "KB-03、SEC-02 | 删除来源后访问历史输出 | 不继续泄露被清除内容，显示受限状态 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-11",
+      "source": "Platform_PRD.md",
+      "line": 553,
+      "description": "QA-01～02 | 有/无依据、冲突版本问题 | 正确引用、拒答或并列提示冲突 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-12",
+      "source": "Platform_PRD.md",
+      "line": 554,
+      "description": "QA-02 | 模型输出不存在的 evidence_id | 校验拦截或修复；不显示假引用 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-13",
+      "source": "Platform_PRD.md",
+      "line": 555,
+      "description": "AG-01 | 文档内含工具越权/提示词注入 | 不扩大权限，不调用白名单外工具 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-14",
+      "source": "Platform_PRD.md",
+      "line": 556,
+      "description": "RPT-02 | 10 项中完成 4，未完成逾期 2 | 完成率 40%、逾期 2；当天到期不算逾期 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-15",
+      "source": "Platform_PRD.md",
+      "line": 557,
+      "description": "RPT-02 | 无截止日、无完成时间、S 为空 | 缺失分别标注，空集合不显示 0% |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-16",
+      "source": "Platform_PRD.md",
+      "line": 558,
+      "description": "RPT-01、04 | 生成后修改源数据并重新生成 | 旧版不变，新版绑定新快照与运行 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-17",
+      "source": "Platform_PRD.md",
+      "line": 559,
+      "description": "RUN-01～02 | Worker 重启/关闭页面/网络超时 | 状态可恢复，有限重试，结果可追踪 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-18",
+      "source": "Platform_PRD.md",
+      "line": 560,
+      "description": "RUN-02 | 403 与模型 JSON 不合格 | 权限错误不重试；格式最多修复一次 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-19",
+      "source": "Platform_PRD.md",
+      "line": 561,
+      "description": "RUN-03 | 取消与写入并发 | 后续动作停止；已提交结果明确列出 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-20",
+      "source": "Platform_PRD.md",
+      "line": 562,
+      "description": "APR-01～02 | 旧页面批准已修改报告 | 版本冲突拦截，不误批新内容 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-21",
+      "source": "Platform_PRD.md",
+      "line": 563,
+      "description": "APR-02 | 两端重复通过/相反决策并发 | 只产生一个有效决策，冲突可见 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-22",
+      "source": "Platform_PRD.md",
+      "line": 564,
+      "description": "APR-03 | 审核通过后发布返回超时 | 同键查询/恢复发布，不重复正式版 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-23",
+      "source": "Platform_PRD.md",
+      "line": 565,
+      "description": "FIX-01 | 仅批准报告，未点击创建整改 | 不创建任何整改任务 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-24",
+      "source": "Platform_PRD.md",
+      "line": 566,
+      "description": "FIX-01 | 批量创建部分失败后重试 | 只补失败项，成功项 ID 不变 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-25",
+      "source": "Platform_PRD.md",
+      "line": 567,
+      "description": "FIX-01 | 同幂等键但修改负责人/截止日 | 返回冲突，不静默覆盖旧请求 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-26",
+      "source": "Platform_PRD.md",
+      "line": 568,
+      "description": "FIX-02～03 | 负责人提交→退回→重提→验收 | 状态、权限、证据、活动记录均正确 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-27",
+      "source": "Platform_PRD.md",
+      "line": 569,
+      "description": "FIX-02 | 负责人自行验收或越状态提交 | 服务端拒绝非法转换 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-28",
+      "source": "Platform_PRD.md",
+      "line": 570,
+      "description": "OUT-02 | 导出草稿/正式版及过期链接 | 状态标识正确；过期/撤权不可下载 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-29",
+      "source": "Platform_PRD.md",
+      "line": 571,
+      "description": "MSG-01 | 通知重复投递/接收人撤权 | 事件去重，不重复业务写入，不泄密 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-30",
+      "source": "Platform_PRD.md",
+      "line": 572,
+      "description": "OPS-01 | 新模板发布与回滚 | 新任务用新版本；旧任务记录不变 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-31",
+      "source": "Platform_PRD.md",
+      "line": 573,
+      "description": "OPS-02 | 达到模型预算或企业配额 | 阻断新调用，历史读取和人工业务仍可用 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "TC-32",
+      "source": "Platform_PRD.md",
+      "line": 574,
+      "description": "ORG-02 | 归档有未完成整改的项目 | 新建受限，已有整改按明确策略继续 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T01",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 434,
+      "description": "WF-D01 | 复制发布模板并由另一成员执行 | 新定义 ID，不继承原成员资料权限 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T02",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 435,
+      "description": "WF-D02 | 无效路径/类型/系统保留变量映射 | 保存校验或发布前拦截，错误定位到字段 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T03",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 436,
+      "description": "WF-D03 | 无证据与检索故障分别触发 | 分别走不足与失败，不都显示“无风险” |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T04",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 437,
+      "description": "WF-D04 | 运行中发布/回滚配置 | 旧运行版本不变，新运行入口正确 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T05",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 438,
+      "description": "WF-D04 | 引用已停用工具的旧模板运行 | 当前安全策略阻断调用，不被版本固定绕过 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T06",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 439,
+      "description": "WF-D05 | 同 submission_key 同/异参数 | 同参数返回原实例，异参数冲突 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T07",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 440,
+      "description": "WF-D05 | P1 定时事件重复、前序待审核 | 只建一例或按策略跳过，记录原因 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T08",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 441,
+      "description": "WF-D05 | P1 定时身份被停用 | 暂停任务，不能改用管理员身份继续 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T09",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 442,
+      "description": "WF-N01 | 上游 FAILED 或未执行必填分支 | 下游不错误标成功，不读取未定义值 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T10",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 443,
+      "description": "W01、RAG-S04 | 有证据、空证据、版本冲突问答 | 正确回答/说明不足/提示冲突 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T11",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 444,
+      "description": "W02 | 10 项任务完成 4、未完成逾期 2 | 完成率 40%、逾期 2，模型不能改数字 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T12",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 445,
+      "description": "W02 | 历史周期无期末快照 | 明示缺口，不用当前状态冒充历史 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T13",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 446,
+      "description": "W02 | 重生成正在审核的报告 | 新运行与新草稿，不覆盖审核版本 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T14",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 447,
+      "description": "W03、TOOL-S03 | 只通过报告，未确认整改 | 不创建整改任务 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T15",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 448,
+      "description": "AG-D01 | 直接调用无权 Agent ID | 服务端拒绝，不泄露业务内容 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T16",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 449,
+      "description": "AG-D02 | 模型输出无效字段/改写数字 | Schema/规则校验拦截，受控修复 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T17",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 450,
+      "description": "AG-D03 | 并发跨租户/项目运行 | 上下文、证据、缓存不串用 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T18",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 451,
+      "description": "AG-D03 | 超长上下文及冲突资料 | 保留关键依据，裁剪有缺口标记 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T19",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 452,
+      "description": "AG-D04 | 调试写工具 | 仅沙箱模拟，不创建生产业务对象 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T20",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 453,
+      "description": "AG-R01 | P1 连续澄清仍缺参 | 达到上限停止，保留输入，不盲目执行 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T21",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 454,
+      "description": "AG-R02 | P1 拒绝计划/批准后新增工具 | 拒绝无调用；新增工具等待新确认 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T22",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 455,
+      "description": "AG-R03 | P1 重试/恢复后达到预算 | 累计次数不清零，预算耗尽停止 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T23",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 456,
+      "description": "AG-R03 | P1 重复查询无新增证据 | 提前停止或请求补充，不无限循环 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T24",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 457,
+      "description": "AG-R04 | 原因仅是模型推断 | 标为假设，不能声称已验证根因或已执行 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T25",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 458,
+      "description": "RAG-S01 | 未授权资料与越范围查询改写 | 检索上下文不包含无权片段 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T26",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 459,
+      "description": "RAG-S02 | 父段包含无权内容 | 不因父块补充扩张读取范围 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T27",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 460,
+      "description": "RAG-S03 | 编造 evidence_id/来源更新 | 假 ID 拦截；旧引用不静默指向新版本 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T28",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 461,
+      "description": "RAG-S03 | 撤权后打开历史报告/引用/下载 | 内容和摘要均受限，非仅链接失效 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T29",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 462,
+      "description": "TOOL-S01～02 | 文档/工具响应要求新增工具或泄密 | 不生效；无权调用与密钥访问被拦截 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T30",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 463,
+      "description": "TOOL-S03 | 确认后改负责人或令牌到期 | 原确认失效，重新确认后才能写入 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T31",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 464,
+      "description": "TOOL-S04 | 写入成功但返回超时后重试 | 同键返回原 ID，只产生一次业务结果 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T32",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 465,
+      "description": "TOOL-S04 | 批量创建部分失败后重试 | 只补失败项，成功项 ID 不变 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T33",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 466,
+      "description": "HITL-01 | 审核等待期间关闭页面/服务重启 | 审核单、版本和待办可恢复，不丢上下文 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T34",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 467,
+      "description": "HITL-02 | 双端相反审批/旧版审批 | 一个有效决策，旧版冲突被拦截 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T35",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 468,
+      "description": "HITL-02 | 审核后发布失败再恢复 | 内容未变且授权有效才重试，不重复发布 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T36",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 469,
+      "description": "HITL-03 | 撤回/取消后使用旧审批链接 | 旧单无效；修订需新版本与新审核单 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T37",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 470,
+      "description": "RUN-S01 | 403/429/模型输出格式错误 | 按类型处理；重试与修复均有上限 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T38",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 471,
+      "description": "RUN-S01 | Worker 重启恢复、快照已失效 | 正常恢复或明确停止，禁止偷偷换输入 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T39",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 472,
+      "description": "RUN-S02 | 取消与创建并发 | 后续动作停止，已提交结果明确列出 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T40",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 473,
+      "description": "RUN-S03 | 达配额、等待审核、队列拥塞 | 限制模型调用，不阻断历史和人工业务 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T41",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 474,
+      "description": "OBS-S02 | 质量或权限回归未达门槛 | 不发布配置版本，保留失败报告 |",
+      "status": "未逐项核验",
+      "evidence": []
+    },
+    {
+      "id": "WA-T42",
+      "source": "Workflow_Agent_PRD.md",
+      "line": 475,
+      "description": "OBS-S03 | 提示词注入、恶意链接及日志查询 | 不越权、不执行脚本、不泄露密钥 |",
+      "status": "未逐项核验",
+      "evidence": []
+    }
+  ],
+  "completion_rule": "最终全部功能具备可操作实现；开发阶段做基本运行检查，系统性质量、压力及严格回归测试后置；未实现或仅有占位不得标为完成。",
+  "execution_preference": "先做成品，不扩写严谨测试；保留语法、启动和关键操作的基本检查。",
+  "delivery_scope": "全部 68 条编号需求对应的本地演示功能已接通。真实企业连接、模型和语义生成采用明确的模拟替代；生产能力、真实模型质量和 74 条严格验收未宣称达标。",
+  "implementation_review": "2026-11-11 按编号完成演示功能/源码映射，并做语法、启动和关键操作检查；不等同于原始 74 条验收全部通过。",
+  "remaining_functional_work": []
+}
